@@ -6,8 +6,8 @@ api_key = 'AIzaSyBnSI5louf-p4SxBGhonqHgL_NYpztZro4'
 gmaps = googlemaps.Client(key='AIzaSyBnSI5louf-p4SxBGhonqHgL_NYpztZro4')
 consulta = gmaps.distance_matrix('london', 'manchester')
 
-print(consulta)
-
-
+for x in consulta:
+    destination_city = consulta['destination_addresses'][0].split(",")[0]
+    print('')
 
 
